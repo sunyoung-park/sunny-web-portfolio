@@ -1,0 +1,32 @@
+@use "./_variables.scss" as *;
+@use "mixins" as *;
+@use "reset";
+@use "sass:map";
+
+// 전체 페이지 기본 스타일
+body {
+    font-family: $font-stack;
+    background-color: map.get($colors, "bg-color");
+    color: map.get($colors, "text");
+    margin: 0;
+    padding: 0;
+}
+
+// 전체 컨테이너 스타일
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+// 기본 버튼 스타일
+.button {
+  @include button(map.get($colors, "primary-color"), #ffffff);
+}
+
+// 반응형 스타일 적용
+@include responsive(mobile) {
+  body {
+    font-size: 14px;
+  }
+}

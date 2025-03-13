@@ -1,0 +1,34 @@
+@use "../_variables.scss" as *;
+@use "../mixins.scss" as *;
+@use "sass:map";
+@use "sass:color";
+
+.header {
+  background-color: map.get($colors, primary-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s;
+
+      &:hover {
+        color: color.adjust(map.get($colors, primary-color), $lightness: 20%);
+      }
+    }
+  }
+
+  @include responsive(mobile) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
