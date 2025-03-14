@@ -8,15 +8,15 @@ function App() {
     <div className="app">
       <Navbar /> {/* ✅ Navbar 추가 */}
       <main>
-        <section id="about">
+        <section className="main-section" id="about">
           <h2>About</h2>
           <p>This is the About section.</p>
         </section>
-        <section id="projects">
+        <section className="main-section" id="projects">
           <h2>Projects</h2>
           <p>This is the Projects section.</p>
         </section>
-        <section id="contact">
+        <section className="main-section" id="contact">
           <h2>Contact</h2>
           <p>This is the Contact section.</p>
         </section>

@@ -3,21 +3,34 @@
 @use "sass:map";
 @use "sass:color";
 
-.header {
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background-color: map.get($colors, primary-color);
-  padding: 20px;
+  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
   color: white;
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 
   .nav-links {
     display: flex;
     gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 
-    a {
+    li {
+      cursor: pointer;
       color: white;
-      text-decoration: none;
       font-weight: bold;
       transition: 0.3s;
 
@@ -30,5 +43,10 @@
   @include responsive(mobile) {
     flex-direction: column;
     text-align: center;
+
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
   }
 }
