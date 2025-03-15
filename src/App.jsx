@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
-import Navbar from "./components/Navbar"; // Navbar 컴포넌트 추가
+import Navbar from "./components/Navbar"; 
+import Section from "./components/Section";
 
 function App() {
 
@@ -8,18 +9,15 @@ function App() {
     <div className="app">
       <Navbar /> {/* ✅ Navbar 추가 */}
       <main>
-        <section className="main-section" id="about">
-          <h2>About</h2>
+        <Section id="about" title="About" backgroundColor="lightblue">
           <p>This is the About section.</p>
-        </section>
-        <section className="main-section" id="projects">
-          <h2>Projects</h2>
+        </Section>
+        <Section id="projects" title="Projects" backgroundColor="lightgreen">
           <p>This is the Projects section.</p>
-        </section>
-        <section className="main-section" id="contact">
-          <h2>Contact</h2>
+        </Section>
+        <Section id="contact" title="Contact" backgroundColor="lightcoral">
           <p>This is the Contact section.</p>
-        </section>
+        </Section>
       </main>
     </div>
   );

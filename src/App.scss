@@ -1,12 +1,36 @@
 @use "./styles/global";
 
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
 .app {
-  width: 1200px;
+  display: block;
+  width: 100%;
   margin: 0 auto;
+  padding-top: 68.4px;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  flex-grow: 1;
+  width: 100%;
 }
 
 .main-section {
-  background-color: aqua;
-  height: 700px;
-  padding: 150px 50px 200px 50px ;
+  background-color: pink;
+  height: 900px;
+  padding-top: 70px;
+  padding-bottom: 50px;
+}
+
+.section-wrapper {
+  background-color: burlywood;
+  width: 1280px;
+  margin: 0 auto;
 }
