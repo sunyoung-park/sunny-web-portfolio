@@ -1,0 +1,12 @@
+@use "./styles/global";
+
+.app {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-section {
+  background-color: aqua;
+  height: 700px;
+  padding: 150px 50px 200px 50px ;
+}

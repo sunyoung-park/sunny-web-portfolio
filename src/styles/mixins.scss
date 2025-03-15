@@ -1,0 +1,27 @@
+@use "sass:color";
+@use "sass:map";
+@use "variables" as *;
+
+// 반응형 믹스인
+@mixin responsive($breakpoint) {
+    @if $breakpoint == mobile {
+      @media (max-width: 768px) { @content; }
+    }
+    @else if $breakpoint == tablet {
+      @media (max-width: 1024px) { @content; }
+    }
+  }
+  
+ // 버튼 스타일 믹스인
+@mixin button($bg-color, $text-color) {
+    background-color: color.adjust(map.get($colors, "bg-color"), $lightness: -10%);
+    color: $text-color;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  
+    &:hover {
+      background-color: color.adjust(map.get($colors, "bg-color"), $lightness: -15%);
+    }
+  }
