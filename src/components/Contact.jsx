@@ -15,24 +15,29 @@ const ContactSection = () => {
 
       {/* 오른쪽: Contact 정보 */}
       <div className="contact-info">
-        <h2 className="contact-title">Contact.</h2>
-        <div className="contact-item">
-          <MdEmail className="icon" />
-          <p>young170627@gmail.com</p>
-        </div>
+        <div className="contact-content">
+          <h2 className="contact-title">Contact.</h2>
+          <div className="contact-item">
+            <MdEmail className="icon" />
+            <p>young170627@gmail.com</p>
+          </div>
+        </div>        
 
-        <h2 className="contact-title">Channel.</h2>
-        <div className="contact-item">
-          <FaGithub className="icon" />
-          <a href="https://github.com/sunyoung-park" target="_blank" rel="noopener noreferrer">
-            github.com/sunyoung-park
-          </a>
-        </div>
-        <div className="contact-item">
+
+        <div className="contact-content">
+          <h2 className="contact-title">Channel.</h2>
+          <div className="contact-item">
+            <FaGithub className="icon" />
+            <a href="https://github.com/sunyoung-park" target="_blank" rel="noopener noreferrer">
+              github.com/sunyoung-park
+            </a>
+          </div>
+          <div className="contact-item">
           <SiTistory className="icon" />
-          <a href="https://ruriruriya.tistory.com/" target="_blank" rel="noopener noreferrer">
-            ruriruriya.tistory.com
-          </a>
+            <a href="https://ruriruriya.tistory.com/" target="_blank" rel="noopener noreferrer">
+              ruriruriya.tistory.com
+            </a>
+          </div>
         </div>
       </div>
     </div>
