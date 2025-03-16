@@ -7,11 +7,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 100px;
+  }
+
+  h2 {
+    font-size: 36pt;
   }
   
   .section-wrapper {
-    background-color: burlywood;
     width: 1280px;
     margin: 0 auto;
   }

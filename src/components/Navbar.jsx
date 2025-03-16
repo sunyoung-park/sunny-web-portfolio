@@ -11,11 +11,11 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      <div className="logo">MyPortfolio</div>
+      <div className="logo">SunnySunny</div>
       <ul className="nav-links">
-        <li onClick={() => scrollToSection("about")}>About</li>
-        <li onClick={() => scrollToSection("projects")}>Projects</li>
+        <li onClick={() => scrollToSection("profile")}>Profile</li>
         <li onClick={() => scrollToSection("contact")}>Contact</li>
+        <li onClick={() => scrollToSection("introduce")}>Introduce</li>
       </ul>
     </nav>
   );
