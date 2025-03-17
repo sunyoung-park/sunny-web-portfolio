@@ -1,0 +1,60 @@
+@use "../_variables.scss" as *;
+@use "../mixins.scss" as *;
+@use "sass:map";
+@use "sass:color";
+
+.work-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  
+  .work-card {
+    width: 80%;
+    max-width: 600px;
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .first-view {
+    text-align: left;
+    font-weight: bold;
+  }
+  
+  .second-view {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #ddd;
+    display: none;
+  }
+  
+  .expanded .second-view {
+    display: block;
+  }
+  
+  .role-content {
+    margin-top: 10px;
+  }
+  
+  .role-content p {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  
+  .role-content ul {
+    margin-top: 5px;
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .role-content li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
