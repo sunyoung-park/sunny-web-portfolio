@@ -4,6 +4,7 @@ import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import Contact from "./components/Contact";
 import Introduce from "./components/Contact";
+import WorkExperience from "./components/WorkExperience";
 
 function App() {
 
@@ -19,6 +20,9 @@ function App() {
         </Section>
         <Section id="introduce" backgroundColor="lightcoral">
           <Introduce />
+        </Section>
+        <Section id="work-experience" backgroundColor="lightblue">
+          <WorkExperience />
         </Section>
       </main>
     </div>
