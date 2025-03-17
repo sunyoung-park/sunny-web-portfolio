@@ -3,6 +3,7 @@ import "./App.scss";
 import Navbar from "./components/Navbar"; 
 import Section from "./components/Section";
 import Contact from "./components/Contact";
+import Introduce from "./components/Introduce";
 
 function App() {
 
@@ -16,8 +17,8 @@ function App() {
         <Section id="contact" backgroundColor="lightgreen">
           <Contact />
         </Section>
-        <Section id="introduce" title="Introduce" backgroundColor="lightcoral">
-          <p>This is the Contact section.</p>
+        <Section id="introduce" backgroundColor="lightcoral">
+          <Introduce />
         </Section>
       </main>
     </div>

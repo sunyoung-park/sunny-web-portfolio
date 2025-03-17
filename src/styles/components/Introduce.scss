@@ -1,0 +1,14 @@
+@use "../_variables.scss" as *;
+@use "../mixins.scss" as *;
+@use "sass:map";
+@use "sass:color";
+
+h2 {
+    line-height: 1.2em;
+    margin-bottom: 30px;
+}
+
+p {
+    line-height: 1.2em;
+
+}
