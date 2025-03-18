@@ -35,7 +35,6 @@ const WorkExperience = () => {
         "FileCoin Onboarding": [
           "파일코인 마이너 온보딩을 위한 대용량 데이터셋 작업(AWS S3 데이터셋/AIHUB 데이터 외 다운로드)",
           "path파일(5만 라인 이상, 약 80TiB 기준) n등분하여 다운로드 병렬처리로 7일 소요를 3-4일로 단축 ",
-          "Echart로 데이터 시각화 구현",
           "singularity 컨테이너 플랫폼을 이용한 car파일 생성작업(블록체인 상 안전하게 저장/검색 할 수 있도록 하는 파일)",
         ],
       },
