@@ -1,0 +1,122 @@
+@use "../_variables.scss" as *;
+@use "../mixins.scss" as *;
+@use "sass:map";
+@use "sass:color";
+
+.work-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.work-card {
+  width: 400px;
+  height: 600px; // ✅ 카드 높이 통일
+  background-color: #f8f9fa;
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ first-view & second-view 내부 스타일 동일하게 맞추기 */
+.first-view,
+.second-view {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+//   padding: 20px; // ✅ 내부 패딩 동일
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+}
+
+.first-view p {
+    font-size: 16pt;
+    margin-top: 20px;
+}
+
+.second-view {
+    padding: 20px;
+}
+
+/* ✅ first-view 숨길 때 공간까지 제거 */
+.first-view.hide {
+  opacity: 0;
+  display: none; // ✅ 공간까지 제거
+}
+
+/* ✅ second-view 스타일 */
+.second-view {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.second-view.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ✅ 아이콘 클릭 스타일 (위치 통일) */
+.icon-click {
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s ease-in-out;
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.icon-click:hover {
+  transform: scale(1.1);
+}
+
+/* ✅ 플러스(➕) 버튼과 닫기(❌) 버튼을 동일한 위치에 배치 */
+.close {
+  bottom: 20px;
+  right: 20px;
+}
+.plus {
+    bottom: 0;
+    right: 0;
+}
+
+/* ✅ second-view 내부 스타일 */
+.role-content {
+  margin-top: 10px;
+}
+
+.role-content p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.role-content ul {
+  margin-top: 5px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.role-content li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
