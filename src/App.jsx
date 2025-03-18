@@ -3,7 +3,7 @@ import "./App.scss";
 import Navbar from "./components/Navbar"; 
 import Section from "./components/Section";
 import Contact from "./components/Contact";
-import Introduce from "./components/Contact";
+import Introduce from "./components/Introduce";
 import WorkExperience from "./components/WorkExperience";
 
 function App() {
