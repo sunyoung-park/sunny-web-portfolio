@@ -3,11 +3,17 @@ import { GoPlusCircle, GoXCircle } from "react-icons/go";
 import "../styles/components/WorkExperience.scss";
 
 const WorkExperience = () => {
-  const [activeCard, setActiveCard] = useState(null);
+  const [activeCards, setActiveCards] = useState([]); // ✅ 여러 개의 second-view가 열릴 수 있도록 배열로 변경
 
   const toggleCard = (index) => {
     console.log("Clicked Card Index:", index);
-    setActiveCard(activeCard === index ? null : index);
+    if (activeCards.includes(index)) {
+      // ✅ X 버튼 클릭 시 해당 카드만 닫힘
+      setActiveCards(activeCards.filter((card) => card !== index));
+    } else {
+      // ✅ 플러스 버튼 클릭 시 기존 카드 유지한 채로 추가
+      setActiveCards([...activeCards, index]);
+    }
   };
 
   const workExperiences = [
@@ -26,7 +32,6 @@ const WorkExperience = () => {
           </a>,
         ],
         "Back-End": ["Spring Boot 카카오써트 본인인증 API 적용"],
-
         "FileCoin Onboarding": [
           "파일코인 마이너 온보딩을 위한 대용량 데이터셋 작업(AWS S3 데이터셋/AIHUB 데이터 외 다운로드)",
           "path파일(5만 라인 이상, 약 80TiB 기준) n등분하여 다운로드 병렬처리로 7일 소요를 3-4일로 단축 ",
@@ -71,9 +76,9 @@ const WorkExperience = () => {
   return (
     <div className="work-container">
       {workExperiences.map((work, index) => (
-        <div key={work.id} className={`work-card ${activeCard === index ? "expanded" : ""}`}>
+        <div key={work.id} className={`work-card ${activeCards.includes(index) ? "expanded" : ""}`}>
           {/* first-view (초기 화면) */}
-          <div className={`first-view ${activeCard === index ? "hide" : ""}`}>
+          <div className={`first-view ${activeCards.includes(index) ? "hide" : ""}`}>
             <h3>{work.company}</h3>
             <p>{work.period}</p>
             <p>{work.description}</p>
@@ -83,7 +88,7 @@ const WorkExperience = () => {
           </div>
 
           {/* second-view (확장된 화면) */}
-          <div className={`second-view ${activeCard === index ? "show" : ""}`}>
+          <div className={`second-view ${activeCards.includes(index) ? "show" : ""}`}>
             <h3>{work.company}</h3>
             {Object.entries(work.details).map(([category, items], i) => (
               <div className="role-content" key={i}>
