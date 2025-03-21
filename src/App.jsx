@@ -24,6 +24,9 @@ function App() {
         <Section id="work-experience" backgroundColor="lightblue">
           <WorkExperience />
         </Section>
+        <Section id="project" backgroundColor="lightgreen">
+          <Project />
+        </Section>
       </main>
     </div>
   );

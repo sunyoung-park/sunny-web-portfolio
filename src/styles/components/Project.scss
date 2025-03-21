@@ -1,0 +1,8 @@
+@use "../_variables.scss" as *;
+@use "../mixins.scss" as *;
+@use "sass:map";
+@use "sass:color";
+
+.project-container {
+    background-color: darkgray;
+}
