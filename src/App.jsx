@@ -1,16 +1,16 @@
 import React from "react";
 import "./App.scss";
-import Navbar from "./components/Navbar"; 
+import Navbar from "./components/Navbar";
 import Section from "./components/Section";
 import Contact from "./components/Contact";
 import Introduce from "./components/Introduce";
 import WorkExperience from "./components/WorkExperience";
+import Project from "./components/Project";
 
 function App() {
-
   return (
     <div className="app">
-      <Navbar /> 
+      <Navbar />
       <main>
         <Section id="profile" title="디자인에 깊은 이해를 가진 앱 개발자" backgroundColor="lightblue">
           <p>안녕하세요. 디자인 지식이 풍부한 앱 개발자 박선영입니다.</p>
@@ -32,4 +32,4 @@ function App() {
   );
 }
 
-export default App
+export default App;
